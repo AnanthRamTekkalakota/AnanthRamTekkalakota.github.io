@@ -1,103 +1,165 @@
+// pages/index.tsx
+//todo light and dark mode
+
+//import { useEffect, useState } from "react";
+//import { Inter } from "next/font/google";
+import { ThemeDropdown } from "@/components/ThemeDropdown";
 import Image from "next/image";
+//import Link from "next/link";
+
+//const inter = Inter({ subsets: ["latin"] });
+
+const experiences = [
+  {
+    name: "Object Segmentation App",
+    date: "June 2024",
+    href: "https://github.com/AnanthRamTekkalakota/object-segmentation",
+  },
+  {
+    name: "Spark My Sport - Full Stack Internship (API & Search Enhancements)",
+    date: "Jan 24 - Mar 24",
+  },
+  {
+    name: "MedAI - Emergency Response Assistant",
+    date: "August 2023",
+    href: "https://devpost.com/software/medai",
+  },
+  {
+    name: "PaySplit - Bill Splitting App",
+    date: "June 2023",
+    href: "https://github.com/AnanthRamTekkalakota/paysplit",
+  },
+  {
+    name: "EPICS - UTDesign Procurement System",
+    date: "Jan 23 - May 23",
+  },
+  {
+    name: "AIS - Food to Recipe System using Python",
+    date: "Feb 23 - Apr 23",
+    href: "https://github.com/RailgunDotEnc/Recipe-Snapshot",
+  },
+];
+
+//todo express intrests in computer science and finance
+
+const relavantCourses = [
+  "Data Structures and Algorithms ",
+  "System Programming and UNIX",
+  "Computer Architecture",
+  "Software Engineering",
+  "Probability and Statistics",
+  "Artificial Intelligence",
+  "Advanced Algorithms Design and Analysis ",
+  "Intro to Machine Learning",
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-background text-foreground px-8 py-12">
+      {/* ─── HEADER ───────────────────────────────────────────────────────── */}
+      <header className="flex justify-between items-center">
+        {/* Site title / your name */}
+        <h1 className="text-xl font-bold">Ananth Ram Tekkalakota</h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        {/* Top‐right nav: X (if you add one), GitHub, LinkedIn, theme toggle */}
+        <nav className="flex items-center space-x-4">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://github.com/AnanthRamTekkalakota"
             target="_blank"
             rel="noopener noreferrer"
+            className="underline"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            GitHub ↗
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://www.linkedin.com/in/ananth-rt/"
             target="_blank"
             rel="noopener noreferrer"
+            className="underline"
           >
-            Read our docs
+            LinkedIn ↗
           </a>
+          <a
+            href="./AnanthramTekk_V4.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            Resume ↗
+          </a>
+          <ThemeDropdown />
+        </nav>
+      </header>
+
+      {/* ─── INTRO + PHOTO ───────────────────────────────────────────────── */}
+      <section className="mt-12 flex flex-col-reverse md:flex-row items-start gap-8">
+        {/* LEFT: your intro text + “what I’ve been up to” */}
+        <div className="flex-1">
+          <h1 className="text-4xl font-extrabold">Hi. I’m A. R. T.</h1>
+          <p className="mt-4 text-lg">
+            Currently at Richardson, Texas, studying computer science and
+            finance at the University of Texas at Dallas.
+          </p>
+
+          {/* “What I’ve been up to:” list */}
+          <div className="mt-8">
+            <h3 className="font-semibold mb-2">What I’ve been up to:</h3>
+            {experiences.map((exp, idx) => (
+              <a
+                key={idx}
+                href={exp.href}
+                className="
+                  group flex justify-between items-center
+                  block p-2 rounded-xl transition-colors duration-200
+                  
+                  /* text colors */
+                  text-black dark:text-white
+                  
+                  /* hover in light */
+                  hover:bg-black hover:text-white
+                  
+                  /* hover in dark */
+                  dark:hover:bg-white dark:hover:text-black
+                "
+              >
+                <span className="underline group-hover:no-underline">
+                  {exp.name} ↗
+                </span>
+                <span className="text-sm opacity-60">{exp.date}</span>
+              </a>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        {/* RIGHT SIDE: profile picture */}
+        <div className="w-full md:w-1/3 lg:w-1/4 relative rounded-xl overflow-hidden shadow-lg">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/profilePicture.png" // put your file in public/
+            alt="Ananth Ram Tekkalakota"
+            width={400} // adjust as needed
+            height={400} // adjust as needed
+            className="object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      {/* ─── COURSEWORK ───────────────────────────────────────────────────── */}
+      <section className="mt-12">
+        <h3 className="font-bold">Relevant Coursework:</h3>
+        <ul className="list-disc list-inside mt-2 space-y-1">
+          {relavantCourses.map((course, i) => (
+            <li key={i}>{course}</li>
+          ))}
+        </ul>
+        <p className="mt-10">
+          Working on a CS Major and Finance Minor for my final year at UTD.
+        </p>
+      </section>
+
+      {/* ─── FOOTER ───────────────────────────────────────────────────────── */}
+      <footer className="mt-24 text-sm text-gray-500">
+        <p>©2025 Ananth Ram Tekkalakota.</p>
       </footer>
-    </div>
+    </main>
   );
 }
