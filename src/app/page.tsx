@@ -80,7 +80,7 @@ export default function Home() {
             LinkedIn ↗
           </a>
           <a
-            href="./AnanthramTekk_V4.pdf"
+            href="/nextjs-github-pages/AnanthramTekk_V4.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
@@ -134,10 +134,10 @@ export default function Home() {
         {/* RIGHT SIDE: profile picture */}
         <div className="w-full md:w-1/3 lg:w-1/4 relative rounded-xl overflow-hidden shadow-lg">
           <Image
-            src="/profilePicture.png" // put your file in public/
+            src="/nextjs-github-pages/profilePicture.png"
             alt="Ananth Ram Tekkalakota"
-            width={400} // adjust as needed
-            height={400} // adjust as needed
+            width={400}
+            height={400}
             className="object-cover"
           />
         </div>
