@@ -134,7 +134,7 @@ export default function Home() {
         {/* RIGHT SIDE: profile picture */}
         <div className="w-full md:w-1/3 lg:w-1/4 relative rounded-xl overflow-hidden shadow-lg">
           <Image
-            src="/nextjs-github-pages/profilePicture.png"
+            src="./profilePicture.png"
             alt="Ananth Ram Tekkalakota"
             width={400}
             height={400}
