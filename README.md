@@ -32,7 +32,7 @@ This repository contains the source code for my personal portfolio website, host
 
 ---
 
-## Functional Requirements
+## Functional Requirements/TODO
 
 ### Home Page
 
