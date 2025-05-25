@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && rm -rf docs && cp -R out docs",
-    "export": "next export",
+    "build": "next build && next export",
+    "postbuild": "rm -rf docs && mv out docs",
+    "export": "next build && next export -o docs",
     "start": "next start",
     "lint": "next lint",
     "build:static": "npm run build" 
