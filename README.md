@@ -32,49 +32,6 @@ This repository contains the source code for my personal portfolio website, host
 
 ---
 
-## Functional Requirements/TODO
-
-### Home Page
-
-- Full-screen hero section with background image  
-- Quick links to Projects and Blog  
-
-### About Page
-
-- Personal bio, skills list, education & experience timeline  
-
-### Projects Page
-
-- Responsive grid of project cards  
-- Each card links to a detailed project demo or repo  
-
-### Blog
-
-- Fetches all `.mdx` files from `src/posts/`  
-- Lists title, date, and reading time  
-- Dynamic routing to `/blog/[slug]`  
-
-### Contact
-
-- Simple contact form (mail-to) or link to email  
-
----
-
-## ✅ To-Do List
-
-### Frontend
-
-- [ ] Dark mode toggle  
-- [ ] Blog search & filter  
-- [ ] Pagination for posts  
-- [ ] Accessibility audit (aria, contrast)  
-
-### CI/CD
-
-- [ ] GitHub Actions for lint, type‐check, build, and deploy previews  
-- [ ] Automate `next export` and push to `gh-pages` branch  
-
----
 
 ## 🔗 Prerequisites
 
