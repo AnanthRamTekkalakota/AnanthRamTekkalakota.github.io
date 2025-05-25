@@ -1,3 +1,4 @@
+"use client";
 // pages/index.tsx
 //todo light and dark mode
 import { ThemeDropdown } from "@/components/ThemeDropdown";
