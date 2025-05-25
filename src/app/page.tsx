@@ -1,44 +1,8 @@
 // pages/index.tsx
 //todo light and dark mode
 
-//import { useEffect, useState } from "react";
-//import { Inter } from "next/font/google";
 import { ThemeDropdown } from "@/components/ThemeDropdown";
 import Image from "next/image";
-//import Link from "next/link";
-
-//const inter = Inter({ subsets: ["latin"] });
-
-const experiences = [
-  {
-    name: "Object Segmentation App",
-    date: "June 2024",
-    href: "https://github.com/AnanthRamTekkalakota/object-segmentation",
-  },
-  {
-    name: "Spark My Sport - Full Stack Internship (API & Search Enhancements)",
-    date: "Jan 24 - Mar 24",
-  },
-  {
-    name: "MedAI - Emergency Response Assistant",
-    date: "August 2023",
-    href: "https://devpost.com/software/medai",
-  },
-  {
-    name: "PaySplit - Bill Splitting App",
-    date: "June 2023",
-    href: "https://github.com/AnanthRamTekkalakota/paysplit",
-  },
-  {
-    name: "EPICS - UTDesign Procurement System",
-    date: "Jan 23 - May 23",
-  },
-  {
-    name: "AIS - Food to Recipe System using Python",
-    date: "Feb 23 - Apr 23",
-    href: "https://github.com/RailgunDotEnc/Recipe-Snapshot",
-  },
-];
 
 //todo express intrests in computer science and finance
 
@@ -104,30 +68,86 @@ export default function Home() {
           {/* “What I’ve been up to:” list */}
           <div className="mt-8">
             <h3 className="font-semibold mb-2">What I’ve been up to:</h3>
-            {experiences.map((exp, idx) => (
-              <a
-                key={idx}
-                href={exp.href}
-                className="
-                  group flex justify-between items-center
-                  block p-2 rounded-xl transition-colors duration-200
-                  
-                  /* text colors */
-                  text-black dark:text-white
-                  
-                  /* hover in light */
-                  hover:bg-black hover:text-white
-                  
-                  /* hover in dark */
-                  dark:hover:bg-white dark:hover:text-black
-                "
-              >
-                <span className="underline group-hover:no-underline">
-                  {exp.name} ↗
-                </span>
-                <span className="text-sm opacity-60">{exp.date}</span>
-              </a>
-            ))}
+            <ul role="list" className="mt-20 space-y-4">
+              <li>
+                <a
+                  href="https://github.com/AnanthRamTekkalakota/object-segmentation"
+                  className="underline rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  <h3 className="text-lg font-semibold leading-8">
+                    Object Segmentation App ↗
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    June 2024
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a className="rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                  <h3 className="text-lg font-semibold leading-8">
+                    Spark My Sport – Full Stack Internship (API & Search
+                    Enhancements)
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    Jan 24 – Mar 24
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://devpost.com/software/medai"
+                  className="underline rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  <h3 className="text-lg font-semibold leading-8">
+                    MedAI – Emergency Response Assistant↗
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    August 2023
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://github.com/AnanthRamTekkalakota/paysplit"
+                  className="underline rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  <h3 className="text-lg font-semibold leading-8">
+                    PaySplit – Bill Splitting App ↗
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    June 2023
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a className="rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                  <h3 className="text-lg font-semibold leading-8">
+                    EPICS – UTDesign Procurement System
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    Jan 23 – May 23
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://github.com/RailgunDotEnc/Recipe-Snapshot"
+                  className="underline rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+                >
+                  <h3 className="text-lg font-semibold leading-8">
+                    AIS – Food to Recipe System using Python ↗
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    Feb 23 – Apr 23
+                  </p>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -137,7 +157,7 @@ export default function Home() {
             src="./profilePicture.png"
             alt="Ananth Ram Tekkalakota"
             width={400}
-            height={400}
+            height={223}
             className="object-cover"
           />
         </div>
