@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AnanthRamTekkalakota.github.io
 
-## Getting Started
 
-First, run the development server:
+## Project Background
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This repository contains the source code for my personal portfolio website, hosted via GitHub Pages at [ananthramtekkalakota.github.io](https://ananthramtekkalakota.github.io). The site showcases my bio, projects, blog posts, and contact information. I built it to have full control over content and styling, ensure fast performance, and make updates as simple as committing Markdown and React components.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Introduction
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Conceptual Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Static & Dynamic Content**  
+  - Static pages (Home, About, Projects, Contact) for core information  
+  - A simple MDX‐backed blog for writing posts in Markdown with React components  
+- **Responsive Design**  
+  - Adapts to mobile, tablet, and desktop  
+  - Optimized for performance and accessibility  
+- **Three Key Sections**  
+  1. **Home** — Hero banner, quick intro, call-to-action  
+  2. **Projects** — Grid of projects with descriptions, links and tech tags  
+  3. **Blog** — List of posts, dynamic routing, reading time estimates  
 
-## Learn More
+### Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** Next.js (App Router)  
+- **Language:** TypeScript  
+- **Styling:** Tailwind CSS, PostCSS  
+- **Components:** shadcn/ui, lucide-react  
+- **Animations:** Framer Motion  
+- **Content:** MDX for blog posts  
+- **Deployment:** GitHub Pages via `next export`  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Functional Requirements
 
-## Deploy on Vercel
+### Home Page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Full-screen hero section with background image  
+- Quick links to Projects and Blog  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### About Page
+
+- Personal bio, skills list, education & experience timeline  
+
+### Projects Page
+
+- Responsive grid of project cards  
+- Each card links to a detailed project demo or repo  
+
+### Blog
+
+- Fetches all `.mdx` files from `src/posts/`  
+- Lists title, date, and reading time  
+- Dynamic routing to `/blog/[slug]`  
+
+### Contact
+
+- Simple contact form (mail-to) or link to email  
+
+---
+
+## ✅ To-Do List
+
+### Frontend
+
+- [ ] Dark mode toggle  
+- [ ] Blog search & filter  
+- [ ] Pagination for posts  
+- [ ] Accessibility audit (aria, contrast)  
+
+### CI/CD
+
+- [ ] GitHub Actions for lint, type‐check, build, and deploy previews  
+- [ ] Automate `next export` and push to `gh-pages` branch  
+
+---
+
+## 🔗 Prerequisites
+
+- [Node.js v16+](https://nodejs.org/)  
+- [npm](https://npmjs.com/) or [Yarn](https://yarnpkg.com/)  
+- Git (for cloning)  
+
+---
+
+## 🛠️ Local Setup
+
+1. **Clone the repo**  
+   ```bash
+   git clone https://github.com/AnanthRamTekkalakota/AnanthRamTekkalakota.github.io.git
+   cd AnanthRamTekkalakota.github.io
