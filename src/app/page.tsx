@@ -1,6 +1,6 @@
 // pages/index.tsx
 //todo light and dark mode
-
+"use client";
 import { ThemeDropdown } from "@/components/ThemeDropdown";
 import Image from "next/image";
 
