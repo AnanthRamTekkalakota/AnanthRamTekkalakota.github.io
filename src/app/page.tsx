@@ -1,6 +1,5 @@
 // pages/index.tsx
 //todo light and dark mode
-"use client";
 import { ThemeDropdown } from "@/components/ThemeDropdown";
 import Image from "next/image";
 
@@ -154,7 +153,7 @@ export default function Home() {
         {/* RIGHT SIDE: profile picture */}
         <div className="w-full md:w-1/3 lg:w-1/4 relative rounded-xl overflow-hidden shadow-lg">
           <Image
-            src="./profilePicture.png"
+            src="/profilePicture.png"
             alt="Ananth Ram Tekkalakota"
             width={400}
             height={223}
