@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# allow our exported _next folder under docs
+!docs/_next/
+!docs/_next/**
+!docs/.nojekyll
