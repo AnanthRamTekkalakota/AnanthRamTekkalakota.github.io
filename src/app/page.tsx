@@ -67,12 +67,11 @@ export default function Home() {
 
           {/* “What I’ve been up to:” list */}
           <div className="mt-8">
-            <h3 className="font-semibold mb-2">What I’ve been up to:</h3>
             <ul role="list" className="mt-20 space-y-4">
               <li>
                 <a
                   href="https://github.com/AnanthRamTekkalakota/object-segmentation"
-                  className="underline rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="underline rounded-md p-3"
                 >
                   <h3 className="text-lg font-semibold leading-8">
                     Object Segmentation App ↗
@@ -84,7 +83,7 @@ export default function Home() {
               </li>
 
               <li>
-                <a className="rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <a className="rounded-md p-3 ">
                   <h3 className="text-lg font-semibold leading-8">
                     Spark My Sport – Full Stack Internship (API & Search
                     Enhancements)
@@ -98,7 +97,7 @@ export default function Home() {
               <li>
                 <a
                   href="https://devpost.com/software/medai"
-                  className="underline rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="underline rounded-md p-3 "
                 >
                   <h3 className="text-lg font-semibold leading-8">
                     MedAI – Emergency Response Assistant↗
@@ -112,7 +111,7 @@ export default function Home() {
               <li>
                 <a
                   href="https://github.com/AnanthRamTekkalakota/paysplit"
-                  className="underline rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="underline rounded-md p-3 "
                 >
                   <h3 className="text-lg font-semibold leading-8">
                     PaySplit – Bill Splitting App ↗
@@ -124,7 +123,7 @@ export default function Home() {
               </li>
 
               <li>
-                <a className="rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <a className="rounded-md p-3 ">
                   <h3 className="text-lg font-semibold leading-8">
                     EPICS – UTDesign Procurement System
                   </h3>
@@ -137,7 +136,7 @@ export default function Home() {
               <li>
                 <a
                   href="https://github.com/RailgunDotEnc/Recipe-Snapshot"
-                  className="underline rounded-md p-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="underline rounded-md p-3 "
                 >
                   <h3 className="text-lg font-semibold leading-8">
                     AIS – Food to Recipe System using Python ↗
@@ -151,31 +150,30 @@ export default function Home() {
           </div>
         </div>
 
-        {/* RIGHT SIDE: profile picture */}
-        <div className="w-full md:w-1/3 lg:w-1/4 relative rounded-xl overflow-hidden shadow-lg">
-          <Image
-            src="/profilePicture.png"
-            alt="Ananth Ram Tekkalakota"
-            width={400}
-            height={223}
-            className="object-cover"
-          />
+        {/* RIGHT SIDE: profile picture + coursework */}
+        <div className="w-full md:w-1/3 lg:w-1/4 flex flex-col gap-6">
+          {/* Profile image card */}
+          <div className="rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="/profilePicture.png"
+              alt="Ananth Ram Tekkalakota"
+              width={400}
+              height={223}
+              className="object-cover"
+            />
+          </div>
+
+          {/* Coursework card */}
+          <div className=" p-4 rounded-lg">
+            <h3 className="text-lg font-semibold mb-3">Relevant Coursework</h3>
+            <ul className="list-disc list-inside space-y-1 text-sm">
+              {relavantCourses.map((course, i) => (
+                <li key={i}>{course}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
-
-      {/* ─── COURSEWORK ───────────────────────────────────────────────────── */}
-      <section className="mt-12">
-        <h3 className="font-bold">Relevant Coursework:</h3>
-        <ul className="list-disc list-inside mt-2 space-y-1">
-          {relavantCourses.map((course, i) => (
-            <li key={i}>{course}</li>
-          ))}
-        </ul>
-        <p className="mt-10">
-          Working on a CS Major and Finance Minor for my final year at UTD.
-        </p>
-      </section>
-
       {/* ─── FOOTER ───────────────────────────────────────────────────────── */}
       <footer className="mt-24 text-sm text-gray-500">
         <p>©2025 Ananth Ram Tekkalakota.</p>
