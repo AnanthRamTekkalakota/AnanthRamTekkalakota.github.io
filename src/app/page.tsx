@@ -44,7 +44,7 @@ export default function Home() {
             LinkedIn ↗
           </a>
           <a
-            href="/nextjs-github-pages/AnanthramTekk_V4.pdf"
+            href="./AnanthramTekk_V4.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
