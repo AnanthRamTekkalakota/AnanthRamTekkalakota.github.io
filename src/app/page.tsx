@@ -44,7 +44,7 @@ export default function Home() {
             LinkedIn ↗
           </a>
           <a
-            href="/Portfolio/AnanthramTekk_V4.pdf"
+            href="/AnanthramTekk_V4.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
@@ -155,7 +155,7 @@ export default function Home() {
           {/* Profile image card */}
           <div className="rounded-xl overflow-hidden shadow-lg">
             <Image
-              src="/Portfolio/profilePicture.png"
+              src="/profilePicture.png"
               alt="Ananth Ram Tekkalakota"
               width={400}
               height={223}
