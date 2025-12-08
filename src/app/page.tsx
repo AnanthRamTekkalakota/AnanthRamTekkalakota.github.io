@@ -44,7 +44,7 @@ export default function Home() {
             LinkedIn ↗
           </a>
           <a
-            href="/AnanthramTekk_V4.pdf"
+            href="/AnanthramTekk_Resumev5.1.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
@@ -59,15 +59,49 @@ export default function Home() {
       <section className="mt-12 flex flex-col-reverse md:flex-row items-start gap-8">
         {/* LEFT: your intro text + “what I’ve been up to” */}
         <div className="flex-1">
-          <h1 className="text-4xl font-extrabold">Hi. I’m A. R. T.</h1>
+          <h1 className="text-4xl font-extrabold">Hi. I&apos;m A. R. T.</h1>
           <p className="mt-4 text-lg">
             Currently at Richardson, Texas, studying computer science and
             finance at the University of Texas at Dallas.
           </p>
+          <p className="mt-4 text-base text-gray-600 dark:text-gray-400">
+            Computer Science student at UT Dallas with hands-on development
+            experience in Python, Java, JavaScript/TypeScript, and modern
+            frameworks. Demonstrated ability to lead backend architecture, build
+            machine learning systems processing 100K+ data points, and develop
+            full-stack applications. Proven track record optimizing APIs,
+            implementing AI-powered solutions, and collaborating in Agile team
+            environments.
+          </p>
 
-          {/* “What I’ve been up to:” list */}
+          {/* "What I&apos;ve been up to:" list */}
           <div className="mt-8">
             <ul role="list" className="mt-20 space-y-4">
+              <li>
+                <a className="rounded-md p-3">
+                  <h3 className="text-lg font-semibold leading-8">
+                    Smart Data Solutions – Backend Lead & AI Developer
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    Aug 2025 – Dec 2025
+                  </p>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://github.com/dp019/4375-project"
+                  className="underline rounded-md p-3"
+                >
+                  <h3 className="text-lg font-semibold leading-8">
+                    Sentiment Analysis Classifier ↗
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                    May 2025
+                  </p>
+                </a>
+              </li>
+
               <li>
                 <a
                   href="https://github.com/AnanthRamTekkalakota/object-segmentation"
